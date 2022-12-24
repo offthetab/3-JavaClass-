@@ -53,9 +53,9 @@ public class Currency_Converter {
         Locale russian = new Locale("ru", "RU");
         NumberFormat ru = NumberFormat.getCurrencyInstance(russian);
 
-        if(curr.matches("RUB"))
+        if(curr.matches("RUB") || (curr.matches("RU")))
             return ru.format(amount);
-        else if(curr.matches("USD"))
+        else if(curr.matches("USD") || (curr.matches("US")))
             return us.format(amount);
         else
             return fr.format(amount);
